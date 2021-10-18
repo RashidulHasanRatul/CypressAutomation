@@ -10,7 +10,7 @@ describe('Dynamic Dropdown Test', function () {
         //       cy.wrap($el).click()
         //     }
 
-        })
+        });
 
         it('should select Specefic Element', function () {
 
@@ -21,5 +21,9 @@ describe('Dynamic Dropdown Test', function () {
                     // use cypress commands on it
                     cy.wrap($el).click()
                 }
-        });
-    });
+        }
+
+        )});
+
+
+});
