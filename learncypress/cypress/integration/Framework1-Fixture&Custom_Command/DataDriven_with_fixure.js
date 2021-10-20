@@ -15,6 +15,10 @@ describe('Working with Fixure', function () {
         cy.get('input[name="name"]:nth-child(2)').type(this.name);
         cy.get('select').select(this.gender);
 
+        // Assertion
+        cy.get(':nth-child(4) > .ng-untouched').should('have.value',this.name);
+
+
     });
 
 });
