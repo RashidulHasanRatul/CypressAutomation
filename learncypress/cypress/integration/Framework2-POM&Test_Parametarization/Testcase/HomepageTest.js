@@ -8,10 +8,23 @@ const homepage = new home();
 
 
 describe('Test', function () {
+
+    before(()=>{
+        cy.fixture('example').then(function (data) {
+            this.name = data.name;
+            this.email=data.email;
+
+        })
+
+    })
+
+
+
+
     it('should test', function () {
        homepage.navigation();
-       homepage.getName().type("RH Ratul");
-       homepage.getEmail().type("rhratul12#gmail.com");
+       homepage.getName().type(this.name);
+       homepage.getEmail().type(this.email);
        homepage.getPass().type('12345');
        homepage.getGender().select('male');
 
